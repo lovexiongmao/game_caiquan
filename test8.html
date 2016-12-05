@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .wrapper {
+                width: 800px;
+                margin: 0 auto;
+                background-color: #A293D7;
+                height: 600px;
+                /*overflow: scroll;*/
+            }
+            
+            .top {
+                width: 100%
+                margin-top: 50px;
+                height: 30px;
+            }
+
+            .left,
+            .right {
+                width: 350px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                background-color: #51C4B6;
+            }
+
+            .left {float: left}
+
+            .right {float: right}
+
+            .center {
+                color: red;
+                margin-left: 25px;
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
+                background-color: #535CD2;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .middle {
+                width: 100%;
+                height: 410px;
+                background-color: #D5A059;
+            }
+
+            .mid-left {
+                width: 350px;
+                float: left;
+                height: 410px;
+                background-color: #A7B1CF;
+            }
+            
+            .mid-center {
+                width: 100px;
+                float: left;
+                height: 410px;
+                color: #0000A0;
+                line-height: 410px;
+                text-align: center;
+                background-color: #79BE76;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+
+            .mid-right {
+                width: 350px;
+                float: right;
+                height: 410px;
+                background-color: #A7B1CF;
+            }
+
+            .radio {
+                width: 70px;
+                height: 70px;
+                display: inline-block;
+                /*margin-left: 140px;*/
+                /*margin-bottom: 30px;*/
+                position: relative;
+                bottom: 13px;
+            }
+
+            .pack {
+                text-align:center;
+                margin-bottom: 30px;
+                border: 1px solid #fff;
+                position: relative;
+            }
+
+            .sure {
+                width: 100%;
+                height: 40px;
+            }
+
+        .choo {
+            clear: both;
+            margin: 0 360px;
+            width: 80px;
+            height: 40px;
+            color: red;
+            line-height: 40px;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .restitle {
+            margin: 0 auto;
+            color: blue;
+            line-height: 40px;
+            font-weight: bolder;
+            font-size: 20px;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            font-family: "楷体";
+        }
+
+        .resshowcul {
+            width: 100%;
+            height: 40px;
+            background-color: #E4C4E8;
+        }
+
+        .resshow {
+            width: 100%;
+            height: 40px;
+            background-color: #C5D6D8;
+        }
+
+        .resshowcul-left,
+        .resshowcul-right{
+            width: 350px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #51C4B6;
+        }
+
+        .resshowcul-left,
+        .resshow-left {float:left;}
+
+        .resshowcul-right,
+        .resshow-right {float:right;}
+
+        .resshowcul-middle {
+            color: red;
+            margin-left: 25px;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #535CD2;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .resshow-middle {
+            margin-left: 25px;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            text-align: center;
+            background-color: #C5D6D8;
+            color: #D009AD;
+        }
+
+        .resshow-left,
+        .resshow-right {
+            width: 350px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: #C5D6D8;
+            color: #D009AD;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top">
+                <div class="left">我</div>
+                <div class="center">VS</div>
+                <div class="right">电脑</div>
+            </div>
+            <div class="middle">
+                <div class="mid-left">
+                    <div class="pack">
+                        <input type="radio" name="choose" value= "1" class="radio" onclick="returnres(this)"/><img src="shitou1.png" alt="石头">
+                    </div>
+                    <div class="pack">
+                        <input type="radio" name="choose" value= "2" class="radio" onclick="returnres(this)"/><img src="jiandao1.png" alt="剪刀">
+                    </div>
+                    <div class="pack">
+                        <input type="radio" name="choose" value= "3" class="radio" onclick="returnres(this)"/><img src="bu1.png" alt="布">
+                    </div>
+                </div>
+                <div class="mid-center">对战</div>
+                <div class="mid-right">
+                    <div class="pack">
+                        <img src="shitou1.png" alt="石头">
+                    </div>
+                    <div class="pack">
+                        <img src="jiandao1.png" alt="剪刀">
+                    </div>
+                    <div class="pack">
+                        <img src="bu1.png" alt="布">
+                    </div>
+                </div>
+            </div>
+            <div class="sure"><input type="button" value="出拳" id="cho" class="choo" onclick="compare()"/></div>
+            <div class="res">
+                <div class="restitle">对战结果</div>
+                <div class="resshowcul">
+                    <div class="resshowcul-left">我</div>
+                    <div class="resshowcul-middle">结果</div>
+                    <div class="resshowcul-right">电脑</div>
+                </div>
+                <div class="resshow">
+                    <div class="resshow-left" id="myway"></div>
+                    <div class="resshow-middle" id="myres"></div>
+                    <div class="resshow-right" id="conpway"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" >
+            alert("建议是使用ie chrome opera浏览器查看。不要使用firefox")
+            var val="";
+            function returnres(obj){
+                val = obj.value;
+            }
+
+            function compare(){
+                var str = [1,2,3];
+                var random = Math.floor(Math.random()*str.length);
+                var res = str[random];
+                resno = parseInt(val);
+                if(resno == res){
+                    if(resno==1){
+                        document.getElementById('myway').innerText="石头";
+                        document.getElementById('conpway').innerText="石头";
+                    }else if(resno==2){
+                        document.getElementById('myway').innerText="剪刀";
+                        document.getElementById('conpway').innerText="剪刀";
+                    }else{
+                        document.getElementById('myway').innerText="布";
+                        document.getElementById('conpway').innerText="布";
+                    } 
+                    document.getElementById('myres').innerText="平局";
+                    alert("平局！请继续！");
+                }else if(resno == 1 && res == 2){
+                    document.getElementById('myway').innerText="石头";
+                    document.getElementById('conpway').innerText="剪刀";
+                    document.getElementById('myres').innerText="赢";
+                    alert("运气不错，你赢了！");
+                }else if(resno == 1 && res == 3){
+                    document.getElementById('myway').innerText="石头";
+                    document.getElementById('conpway').innerText="布";
+                    document.getElementById('myres').innerText="输";
+                    alert("很遗憾，你输了！");
+                }else if(resno == 2 && res == 1){
+                    document.getElementById('myway').innerText="剪刀";
+                    document.getElementById('conpway').innerText="石头";
+                    document.getElementById('myres').innerText="输";
+                    alert("你真是太不幸了，你输了！");
+                }else if(resno == 2 && res == 3){
+                    document.getElementById('myway').innerText="剪刀";
+                    document.getElementById('conpway').innerText="布";
+                    document.getElementById('myres').innerText="赢";
+                    alert("给你点32个赞，你赢了！");
+                }else if(resno == 3 && res == 1){
+                    document.getElementById('myway').innerText="布";
+                    document.getElementById('conpway').innerText="石头";
+                    document.getElementById('myres').innerText="赢";
+                    alert("666+82分，你赢了！");
+                }else if(resno == 3 && res == 2){
+                    document.getElementById('myway').innerText="布";
+                    document.getElementById('conpway').innerText="剪刀";
+                    document.getElementById('myres').innerText="输";
+                    alert("输了不要灰心，再接再厉！");
+                }
+            }
+        </script>
+    </body>
+</html>
