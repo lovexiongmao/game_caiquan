@@ -1,2 +1,2 @@
 # game_caiquan
-this is a little game about 猜拳
+this is a little game named 猜拳
